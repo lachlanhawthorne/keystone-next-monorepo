@@ -1,0 +1,14 @@
+schema: '../../apps/cms/schema.graphql'
+documents: './graphql/**/*.graphql'
+overwrite: true
+generates:
+  # ---------------------------------------
+  graphql/generated/graphql.ts:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-urql'
+      - 'typescript-resolvers'
+    config:
+      withHooks: true
+      withComponent: false    
